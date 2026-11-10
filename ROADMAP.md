@@ -41,28 +41,17 @@ flowchart TD
 
 ### Tahap 1 — Perencanaan dan Analisis
 Fokus pada perumusan ide, konsep platform, arsitektur data, dan arah visual proyek.
-- [ ] Menentukan konsep dan tujuan website FaunaID.
-- [ ] Menentukan target pengguna (pelajar, mahasiswa, peneliti, pemerhati satwa, dan masyarakat umum).
-- [ ] Menentukan fitur utama website (katalog fauna, peta interaktif, artikel edukasi, sistem favorit, dashboard admin).
-- [ ] Membuat alur penggunaan website (*user flow*) untuk pengunjung biasa, pengguna terdaftar, dan admin.
-- [ ] Membuat rancangan database (Entity Relationship Diagram / ERD) dan relasi antar tabel.
-- [ ] Menentukan desain dan identitas visual website (moodboard, palet warna bertema alam/hutan Indonesia, tipografi).
+- [x] Menentukan konsep dan tujuan website FaunaID.
+- [x] Menentukan target pengguna (pelajar, mahasiswa, peneliti, pemerhati satwa, dan masyarakat umum).
+- [x] Menentukan fitur utama website (katalog fauna, peta interaktif, artikel edukasi, sistem favorit, dashboard admin).
+- [x] Membuat alur penggunaan website (*user flow*) untuk pengunjung biasa, pengguna terdaftar, dan admin.
+- [x] Membuat rancangan database (Entity Relationship Diagram / ERD) dan relasi antar tabel.
+- [x] Menentukan desain dan identitas visual website (moodboard, palet warna bertema alam/hutan Indonesia, tipografi).
 
 **Deliverables:** Dokumen spesifikasi kebutuhan, diagram ERD, dan diagram User Flow.
 
 ---
-
 ### Tahap 2 — UI/UX Design
-Fokus pada perancangan antarmuka pengguna dan pengalaman visual yang interaktif serta ramah pengguna.
-- [ ] Membuat *wireframe* setiap halaman website sebagai acuan tata letak.
-- [ ] Mendesain halaman beranda (*homepage* / landing page) dengan hero section informatif.
-- [ ] Mendesain halaman katalog fauna (fitur pencarian, filter kategori & habitat, serta sistem grid/card).
-- [ ] Mendesain halaman detail fauna (galeri gambar, taksonomi, deskripsi, habitat, status konservasi).
-- [ ] Mendesain peta interaktif Indonesia (pembagian visual 3 zona persebaran fauna).
-- [ ] Mendesain halaman artikel edukasi, halaman login, halaman register, dan dashboard admin.
-- [ ] Menentukan *design system* lengkap: palet warna, tipografi, set ikon, dan komponen UI (tombol, kartu, modal, alert).
-
-**Deliverables:** Desain mockup UI/UX siap slicing beserta aset grafis dan panduan gaya desain.
 
 ---
 
