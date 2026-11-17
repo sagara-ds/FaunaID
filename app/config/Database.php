@@ -280,21 +280,21 @@ class Database {
             $faunaStmt->execute($f);
         }
 
-        // Fauna Images — Sumber: Wikimedia Commons (CC BY-SA / CC0), terverifikasi sesuai spesies
+        // Fauna Images — Sumber: Wikimedia Commons (CC BY-SA / CC0), tersalin lokal ke public/uploads agar tidak bergantung CDN
         $imgData = [
-            [1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg', 'Harimau Sumatera dewasa bertengger di tunggul pohon', 1],
-            [1, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Panthera_tigris_sumatran_subspecies.jpg/960px-Panthera_tigris_sumatran_subspecies.jpg', 'Harimau Sumatera beristirahat di rumput konservasi', 0],
-            [2, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Orangutan_Kalimantan_%28Pongo_pygmaeus%29.jpg/960px-Orangutan_Kalimantan_%28Pongo_pygmaeus%29.jpg', 'Orangutan jantan dewasa beristirahat di hutan Kalimantan', 1],
-            [3, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Komodo_dragon_%28Varanus_komodoensis%29.jpg/960px-Komodo_dragon_%28Varanus_komodoensis%29.jpg', 'Komodo menjulurkan lidah bercabang untuk mencium bau jauh', 1],
-            [4, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Paradisaea_apoda_-Bali_Bird_Park-5.jpg/960px-Paradisaea_apoda_-Bali_Bird_Park-5.jpg', 'Cenderawasih besar menampakkan bulu hias kuning keemasan', 1],
-            [5, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Rhinoceros_sondaicus_in_London_Zoo.jpg/960px-Rhinoceros_sondaicus_in_London_Zoo.jpg', 'Badak Jawa satu cula (dokumentasi historis specimen)', 1],
-            [6, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Anoa_Bubalus_depressicornis_Surabaya_Zoo.jpg/960px-Anoa_Bubalus_depressicornis_Surabaya_Zoo.jpg', 'Anoa dataran rendah dengan tanduk lurus meruncing', 1],
-            [7, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Suidae_Babyrousa_babyrussa_3.1.jpg/960px-Suidae_Babyrousa_babyrussa_3.1.jpg', 'Babirusa jantan dengan taring atas yang menembus moncong', 1],
-            [8, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bali_Myna_0A2A9443.jpg/960px-Bali_Myna_0A2A9443.jpg', 'Jalak Bali berbulu putih mulus di dahan ranting', 1],
-            [9, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Proboscis_monkey_%28Nasalis_larvatus%29_male_Labuk_Bay.jpg/960px-Proboscis_monkey_%28Nasalis_larvatus%29_male_Labuk_Bay.jpg', 'Bekantan jantan dewasa bermahkota hidung panjang', 1],
-            [10, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Sumatran_elephants.jpg/960px-Sumatran_elephants.jpg', 'Kawanan gajah sumatera melintasi padang rumput', 1],
-            [11, 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/River_Dolphin_in_Motion.jpg/960px-River_Dolphin_in_Motion.jpg', 'Pesut air tawar melompat di muara sungai', 1],
-            [12, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Casuarius_casuarius_-_Kyp%C3%A4r%C3%A4kasuaari%2C_Southern_Cassowary%2C_Hj%C3%A4lmkasuar_IMG_1554_C.JPG/960px-Casuarius_casuarius_-_Kyp%C3%A4r%C3%A4kasuaari%2C_Southern_Cassowary%2C_Hj%C3%A4lmkasuar_IMG_1554_C.JPG', 'Kasuari gelambir ganda dengan helm tanduk di kepala', 1]
+            [1, 'fauna_1_tiger_sumatra_1.jpg', 'Harimau Sumatera dewasa bertengger di tunggul pohon', 1],
+            [1, 'fauna_1_tiger_sumatra_2.jpg', 'Harimau Sumatera beristirahat di rumput konservasi', 0],
+            [2, 'fauna_2_orangutan_1.jpg', 'Orangutan jantan dewasa beristirahat di hutan Kalimantan', 1],
+            [3, 'fauna_3_komodo_1.jpg', 'Komodo menjulurkan lidah bercabang untuk mencium bau jauh', 1],
+            [4, 'fauna_4_cenderawasih.jpg', 'Cenderawasih besar menampakkan bulu hias kuning keemasan', 1],
+            [5, 'fauna_5_badak_jawa.jpg', 'Badak Jawa satu cula (dokumentasi historis specimen)', 1],
+            [6, 'fauna_6_anoa.jpg', 'Anoa dataran rendah dengan tanduk lurus meruncing', 1],
+            [7, 'fauna_7_babirusa.jpg', 'Babirusa jantan dengan taring atas yang menembus moncong', 1],
+            [8, 'fauna_8_jalak_bali.jpg', 'Jalak Bali berbulu putih mulus di dahan ranting', 1],
+            [9, 'fauna_9_bekantan.jpg', 'Bekantan jantan dewasa bermahkota hidung panjang', 1],
+            [10, 'fauna_10_gajah_sumatera.jpg', 'Kawanan gajah sumatera melintasi padang rumput', 1],
+            [11, 'fauna_11_pesut.jpg', 'Pesut air tawar melompat di muara sungai', 1],
+            [12, 'fauna_12_kasuari.jpg', 'Kasuari gelambir ganda dengan helm tanduk di kepala', 1]
         ];
         $imgStmt = $pdo->prepare("INSERT OR IGNORE INTO fauna_images (fauna_id, image_url, caption, is_primary) VALUES (?, ?, ?, ?)");
         foreach ($imgData as $im) {
@@ -322,15 +322,15 @@ class Database {
             [1, 1, 'Garis Wallace dan Weber: Jejak Keajaiban Biogeografi Nusantara', 'garis-wallace-dan-weber-jejak-keajaiban-biogeografi-nusantara',
              'Memahami bagaimana pergeseran lempeng bumi ribuan tahun silam melahirkan tiga zona persebaran fauna unik yang tiada duanya di dunia.',
              '<p>Indonesia merupakan negeri yang memiliki fenomena biogeografi paling mengagumkan di dunia. Diapit oleh Benua Asia dan Benua Australia, kepulauan nusantara menjadi titik pertemuan evolusi satwa yang dipisahkan oleh garis khayal imajiner: <strong>Garis Wallace</strong>, <strong>Garis Weber</strong>, dan <strong>Garis Lydekker</strong>.</p><h3>1. Zona Asiatis (Paparan Sunda)</h3><p>Mencakup pulau Sumatra, Jawa, Bali, dan Kalimantan. Fauna di kawasan ini didominasi oleh mamalia berukuran besar (gajah, badak, harimau), primata cerdas, dan burung-burung dengan kicauan merdu.</p><h3>2. Zona Peralihan (Wallacea)</h3><p>Meliputi Sulawesi, Kepulauan Maluku, dan Nusa Tenggara. Zona ini tidak pernah menyatu dengan benua Asia maupun Australia, sehingga melahirkan satwa-satwa endemik purba yang hanya bisa ditemukan di sini, seperti Komodo, Anoa, Babirusa, dan Burung Maleo.</p><h3>3. Zona Australis (Paparan Sahul)</h3><p>Mencakup Papua dan kepulauan di sekitarnya yang dahulu terhubung dengan benua Australia. Satwa di wilayah ini memiliki karakteristik mamalia berkantung (marsupial) dan burung dengan warna bulu luar biasa mempesona seperti Cenderawasih dan Kasuari.</p>',
-             'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80', 'published', 248],
+             'art_wallace_landscape.jpg', 'published', 248],
             [2, 1, 'Menjaga Benteng Terakhir Habitat Harimau Sumatera', 'menjaga-benteng-terakhir-habitat-harimau-sumatera',
              'Upaya konservasi bersama masyarakat adat dan jagawana dalam memerangi deforestasi serta perburuan liar di kawasan Bukit Barisan.',
              '<p>Dengan statusnya yang kini terkategori <em>Critically Endangered</em> (Kritis) dalam daftar merah IUCN, Harimau Sumatera berada di ambang batas kelangsungan hidupnya. Hilangnya koridor hutan akibat pembukaan lahan perkebunan dan fragmentasi habitat menjadi ancaman paling nyata.</p>',
-             'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg', 'published', 195],
+             'fauna_1_tiger_sumatra_1.jpg', 'published', 195],
             [3, 1, 'Kisah Sukses Penangkaran dan Pelepasliaran Jalak Bali', 'kisah-sukses-penangkaran-dan-pelepasliaran-jalak-bali',
              'Dari jurang kepunahan hingga terbang bebas kembali di alam liar Taman Nasional Bali Barat berkat keterlibatan komunitas lokal.',
              '<p>Pada dekade 1990-an, populasi Jalak Bali di alam liar sempat menyusut hingga di bawah 15 individu saja akibat maraknya perburuan burung hias. Melalui penangkaran terpadu di Taman Nasional Bali Barat, populasinya kini perlahan membaik dan menari bebas di alam terbuka.</p>',
-             'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bali_Myna_0A2A9443.jpg/960px-Bali_Myna_0A2A9443.jpg', 'published', 142]
+             'fauna_8_jalak_bali.jpg', 'published', 142]
         ];
 
         $artStmt = $pdo->prepare("INSERT OR IGNORE INTO articles (id, user_id, judul, slug, ringkasan, konten, thumbnail, status, views) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");

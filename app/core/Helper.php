@@ -22,7 +22,7 @@ if (!function_exists('asset')) {
 }
 
 if (!function_exists('uploadUrl')) {
-    function uploadUrl(?string $filename, string $fallback = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg'): string {
+    function uploadUrl(?string $filename, string $fallback = 'fauna_1_tiger_sumatra_1.jpg'): string {
         if (empty($filename)) {
             return $fallback;
         }

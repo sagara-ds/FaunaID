@@ -157,7 +157,7 @@ class AdminController extends Controller {
         }
 
         if (empty($imageUrl)) {
-            $imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg';
+            $imageUrl = 'fauna_1_tiger_sumatra_1.jpg';
         }
 
         $faunaModel->saveImage($faunaId, $imageUrl, $namaLokal, true);
@@ -404,7 +404,7 @@ class AdminController extends Controller {
             'slug'      => $slug,
             'ringkasan' => $ringkasan,
             'konten'    => $konten,
-            'thumbnail' => $thumbnail ?: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+            'thumbnail' => $thumbnail ?: 'art_wallace_landscape.jpg',
             'status'    => $status
         ]);
 

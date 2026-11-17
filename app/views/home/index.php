@@ -45,7 +45,7 @@
 
         <div class="hero-visual">
             <div class="hero-image-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg" alt="Harimau Sumatera" class="hero-main-img">
+                <img src="<?= uploadUrl('fauna_1_tiger_sumatra_1.jpg') ?>" alt="Harimau Sumatera" class="hero-main-img">
                 <div class="hero-floating-badge badge-top">
                     <span class="pulse-dot"></span>
                     <div>
