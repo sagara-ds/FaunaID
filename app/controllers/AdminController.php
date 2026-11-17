@@ -157,7 +157,7 @@ class AdminController extends Controller {
         }
 
         if (empty($imageUrl)) {
-            $imageUrl = 'https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80';
+            $imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg';
         }
 
         $faunaModel->saveImage($faunaId, $imageUrl, $namaLokal, true);

@@ -22,11 +22,11 @@ if (!function_exists('asset')) {
 }
 
 if (!function_exists('uploadUrl')) {
-    function uploadUrl(?string $filename, string $fallback = 'https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80'): string {
+    function uploadUrl(?string $filename, string $fallback = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg/960px-Osnabr%C3%BCck_-_Zoo_-_Panthera_Tigris_Sumatrae_01.jpg'): string {
         if (empty($filename)) {
             return $fallback;
         }
-        // Jika sudah berupa URL eksternal (Unsplash, dll)
+        // Jika sudah berupa URL eksternal (Wikimedia, Unsplash, dll)
         if (str_starts_with($filename, 'http://') || str_starts_with($filename, 'https://')) {
             return $filename;
         }

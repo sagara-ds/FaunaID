@@ -151,7 +151,7 @@
 
             <div class="form-group col-md-6">
                 <label for="image_url" class="form-label">Atau Masukkan Tautan / URL Gambar</label>
-                <input type="url" id="image_url" name="image_url" class="form-control" placeholder="https://images.unsplash.com/...">
+                <input type="url" id="image_url" name="image_url" class="form-control" placeholder="https://upload.wikimedia.org/wikipedia/commons/...">
                 <small class="form-hint">Digunakan jika tidak mengunggah file lokal.</small>
             </div>
         </div>

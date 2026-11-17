@@ -39,7 +39,7 @@
             <!-- Thumbnail URL -->
             <div class="form-group col-md-6">
                 <label for="thumbnail_url" class="form-label">Atau URL Gambar Sampul</label>
-                <input type="url" id="thumbnail_url" name="thumbnail_url" value="<?= e($article['thumbnail'] ?? '') ?>" class="form-control" placeholder="https://images.unsplash.com/...">
+                <input type="url" id="thumbnail_url" name="thumbnail_url" value="<?= e($article['thumbnail'] ?? '') ?>" class="form-control" placeholder="https://upload.wikimedia.org/wikipedia/commons/...">
             </div>
         </div>
 

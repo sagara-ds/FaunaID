@@ -57,71 +57,87 @@
 
                     <!-- Lines of Wallace & Weber -->
                     <!-- Garis Wallace (Antara Kalimantan/Bali dan Sulawesi/Lombok) -->
-                    <path d="M 440 30 L 440 220 L 410 320 L 410 440" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6,4" fill="none" class="boundary-line wallace-line"/>
-                    <text x="445" y="60" fill="#c0392b" font-size="11" font-weight="700">Garis Wallace</text>
+                    <path d="M 458 30 L 456 120 L 452 200 L 446 260 L 430 300 L 424 340 L 422 440" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="6,4" fill="none" class="boundary-line wallace-line"/>
+                    <text x="462" y="56" fill="#c0392b" font-size="11" font-weight="700">Garis Wallace</text>
 
-                    <!-- Garis Weber (Antara Sulawesi/Nusa Tenggara dan Maluku/Papua) -->
-                    <path d="M 680 30 L 670 170 L 640 280 L 630 440" stroke="#8e44ad" stroke-width="2.5" stroke-dasharray="6,4" fill="none" class="boundary-line weber-line"/>
-                    <text x="685" y="60" fill="#8e44ad" font-size="11" font-weight="700">Garis Weber</text>
+                    <!-- Garis Weber (Antara Sulawesi/Maluku-Pasca dan Papua) -->
+                    <path d="M 715 30 L 712 110 L 715 200 L 718 300 L 712 440" stroke="#8e44ad" stroke-width="2.5" stroke-dasharray="6,4" fill="none" class="boundary-line weber-line"/>
+                    <text x="688" y="56" fill="#8e44ad" font-size="11" font-weight="700" text-anchor="end">Garis Weber</text>
 
                     <!-- ============================================== -->
                     <!-- ZONA ASIATIS (SUMATRA, KALIMANTAN, JAWA, BALI) -->
                     <!-- ============================================== -->
-                    
-                    <!-- Pulau Sumatra -->
+
+                    <!-- Pulau Sumatra + Bangka-Belitung + Mentawai -->
                     <g class="map-region-group zone-asiatis-group" data-region="Sumatra" data-zone="Asiatis">
-                        <path d="M 90 90 L 160 130 L 220 220 L 250 280 L 230 300 L 180 250 L 110 160 L 70 100 Z" class="map-island island-sumatra" />
-                        <text x="140" y="190" class="map-label">Sumatra</text>
+                        <path d="M 62 86 L 84 64 L 112 72 L 136 98 L 168 132 L 204 172 L 232 214 L 254 252 L 262 278 L 252 296 L 230 298 L 208 276 L 180 242 L 148 204 L 116 166 L 88 130 L 66 106 Z" class="map-island island-sumatra"/>
+                        <ellipse cx="210" cy="320" rx="14" ry="9" class="map-island"/>
+                        <ellipse cx="178" cy="332" rx="9" ry="6" class="map-island"/>
+                        <ellipse cx="44" cy="150" rx="4" ry="9" class="map-island"/>
+                        <ellipse cx="36" cy="192" rx="4" ry="10" class="map-island"/>
+                        <ellipse cx="28" cy="236" rx="3" ry="8" class="map-island"/>
+                        <text x="128" y="182" class="map-label">Sumatra</text>
                     </g>
 
                     <!-- Pulau Kalimantan -->
                     <g class="map-region-group zone-asiatis-group" data-region="Kalimantan" data-zone="Asiatis">
-                        <path d="M 280 150 L 330 110 L 400 120 L 430 180 L 420 240 L 360 260 L 300 240 L 270 190 Z" class="map-island island-kalimantan" />
-                        <text x="330" y="195" class="map-label">Kalimantan</text>
+                        <path d="M 300 118 L 330 104 L 366 106 L 396 118 L 426 136 L 442 166 L 436 202 L 420 232 L 394 254 L 358 264 L 328 258 L 304 244 L 287 224 L 274 194 L 270 164 L 279 136 Z" class="map-island island-kalimantan"/>
+                        <text x="318" y="196" class="map-label">Kalimantan</text>
                     </g>
 
-                    <!-- Pulau Jawa -->
+                    <!-- Pulau Jawa + Madura -->
                     <g class="map-region-group zone-asiatis-group" data-region="Jawa & Bali" data-zone="Asiatis">
-                        <path d="M 240 330 L 380 340 L 390 355 L 245 350 Z" class="map-island island-jawa" />
-                        <text x="290" y="342" class="map-label">Jawa</text>
+                        <path d="M 150 348 L 172 341 L 204 343 L 236 341 L 268 340 L 300 339 L 332 339 L 356 342 L 376 348 L 384 358 L 370 364 L 338 362 L 300 360 L 258 360 L 218 361 L 178 363 L 156 359 Z" class="map-island island-jawa"/>
+                        <ellipse cx="400" cy="354" rx="11" ry="5" class="map-island"/>
+                        <text x="238" y="358" class="map-label label-small">Jawa</text>
                     </g>
 
                     <!-- Pulau Bali -->
                     <g class="map-region-group zone-asiatis-group" data-region="Jawa & Bali" data-zone="Asiatis">
-                        <ellipse cx="400" cy="350" rx="10" ry="7" class="map-island island-bali" />
-                        <text x="395" y="375" class="map-label label-small">Bali</text>
+                        <ellipse cx="412" cy="366" rx="9" ry="7" class="map-island island-bali"/>
+                        <text x="400" y="390" class="map-label label-small">Bali</text>
                     </g>
 
                     <!-- ============================================== -->
                     <!-- ZONA PERALIHAN (SULAWESI, NUSA TENGGARA, MALUKU) -->
                     <!-- ============================================== -->
 
-                    <!-- Pulau Sulawesi (Bentuk Khas 4 Semenanjung) -->
+                    <!-- Pulau Sulawesi (Bentuk K khas 4 Semenanjung) -->
                     <g class="map-region-group zone-peralihan-group" data-region="Sulawesi" data-zone="Peralihan">
-                        <path d="M 480 140 L 530 135 L 560 170 L 520 185 L 500 215 L 540 235 L 535 255 L 495 240 L 480 270 L 465 240 L 475 190 Z" class="map-island island-sulawesi" />
-                        <text x="485" y="210" class="map-label">Sulawesi</text>
+                        <path d="M 552 98 L 576 90 L 586 100 L 574 122 L 560 146 L 548 162 L 536 170 L 516 182 L 502 198 L 494 218 L 496 238 L 492 254 Q 484 274 496 292 L 510 306 L 518 302 L 514 286 L 508 268 L 508 250 L 514 234 L 526 228 L 540 236 L 550 258 Q 558 280 572 300 L 582 314 L 590 310 L 586 296 L 572 272 L 562 250 L 558 238 L 566 228 L 584 222 L 600 214 L 616 208 Q 626 202 620 192 L 606 190 L 590 198 L 574 206 L 566 192 L 558 168 L 556 146 L 552 122 Z" class="map-island island-sulawesi"/>
+                        <text x="500" y="222" class="map-label">Sulawesi</text>
                     </g>
 
-                    <!-- Kepulauan Nusa Tenggara (Lombok, Sumbawa, Flores, Komodo, Timor) -->
+                    <!-- Kepulauan Nusa Tenggara (Lombok, Sumbawa, Komodo, Flores, Sumba, Timor) -->
                     <g class="map-region-group zone-peralihan-group" data-region="Kepulauan Nusa Tenggara" data-zone="Peralihan">
-                        <path d="M 425 355 L 450 355 L 485 350 L 540 345 L 590 355 L 610 370 L 580 370 L 530 365 L 430 368 Z" class="map-island island-nustra" />
-                        <text x="490" y="385" class="map-label">Nusa Tenggara</text>
+                        <ellipse cx="432" cy="366" rx="8" ry="6" class="map-island"/>
+                        <path d="M 446 360 L 478 357 L 484 364 L 448 366 Z" class="map-island"/>
+                        <ellipse cx="492" cy="361" rx="4" ry="3" class="map-island"/>
+                        <path d="M 502 358 L 556 354 L 562 362 L 504 364 Z" class="map-island"/>
+                        <path d="M 520 382 L 554 380 L 558 389 L 524 391 Z" class="map-island"/>
+                        <path d="M 578 377 L 626 371 L 642 380 L 606 387 L 580 385 Z" class="map-island"/>
+                        <text x="486" y="416" class="map-label label-small">Nusa Tenggara</text>
                     </g>
 
-                    <!-- Kepulauan Maluku -->
+                    <!-- Kepulauan Maluku (Halmahera, Morotai, Seram, Buru) -->
                     <g class="map-region-group zone-peralihan-group" data-region="Kepulauan Maluku" data-zone="Peralihan">
-                        <path d="M 610 130 L 630 120 L 635 160 L 615 170 Z M 600 200 L 640 210 L 620 235 Z M 640 270 L 660 280 L 650 310 Z" class="map-island island-maluku" />
-                        <text x="610" y="185" class="map-label">Maluku</text>
+                        <path d="M 660 118 L 674 108 L 680 122 L 668 130 L 676 140 L 690 134 L 702 138 L 700 150 L 688 150 L 678 158 L 668 152 Q 656 146 658 132 Z" class="map-island island-maluku"/>
+                        <path d="M 656 96 L 666 92 L 664 104 L 654 104 Z" class="map-island"/>
+                        <ellipse cx="688" cy="242" rx="21" ry="7" class="map-island"/>
+                        <ellipse cx="644" cy="234" rx="12" ry="8" class="map-island"/>
+                        <text x="628" y="200" class="map-label">Maluku</text>
                     </g>
 
                     <!-- ============================================== -->
                     <!-- ZONA AUSTRALIS (PAPUA & PULAU SATELIT) -->
                     <!-- ============================================== -->
 
-                    <!-- Pulau Papua (Burung Cenderawasih) -->
+                    <!-- Pulau Papua (kepala burung, teluk Cenderawasih, semenanjung tenggara) -->
                     <g class="map-region-group zone-australis-group" data-region="Papua & Sekitarnya" data-zone="Australis">
-                        <path d="M 700 190 L 730 170 L 760 195 L 820 190 L 920 220 L 930 310 L 880 320 L 810 290 L 750 250 L 710 220 Z" class="map-island island-papua" />
-                        <text x="810" y="250" class="map-label">Papua</text>
+                        <path d="M 738 156 L 756 132 L 784 126 L 804 136 L 800 156 L 780 164 L 770 176 L 792 176 L 828 170 L 872 172 L 920 184 L 938 204 L 942 234 L 930 258 L 906 282 L 918 312 L 908 324 L 878 302 L 848 288 L 810 286 L 780 268 L 758 240 L 748 214 L 736 186 Z" class="map-island island-papua"/>
+                        <ellipse cx="724" cy="122" rx="9" ry="5" class="map-island"/>
+                        <ellipse cx="942" cy="308" rx="8" ry="4" class="map-island"/>
+                        <text x="822" y="232" class="map-label">Papua</text>
                     </g>
                 </svg>
             </div>
